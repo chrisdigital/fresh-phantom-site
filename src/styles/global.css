@@ -1,0 +1,6 @@
+/* global.css — Single entry point for all styles.
+   Import order: base (resets + tokens) → structure (layout) → presentation (visuals). */
+
+@import './base.css';
+@import './structure.css';
+@import './presentation.css';

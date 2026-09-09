@@ -1,0 +1,5 @@
+# Cloudflare Pages project configuration.
+# Environment variables (RESEND_API_KEY, CONTACT_TO_EMAIL) are set in the
+# Cloudflare dashboard under Pages > Settings > Environment variables.
+name = "fresh-phantom-site"
+compatibility_date = "2026-09-09"

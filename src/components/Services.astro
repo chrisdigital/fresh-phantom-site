@@ -1,0 +1,63 @@
+---
+/**
+ * Services section — three service cards in a 1px-gap grid.
+ * Structure only; styles in structure.css + presentation.css.
+ */
+const services = [
+  {
+    num: '01',
+    icon: 'box',
+    title: 'Product<br/>Development',
+    desc: 'From early concept to working product. We shape the idea, define the experience, prototype the system, and turn ambiguity into something real.',
+    items: ['Product strategy', 'Concept development', 'Prototyping & MVPs', 'UX / UI direction'],
+  },
+  {
+    num: '02',
+    icon: 'circle',
+    title: 'Branding',
+    desc: 'We construct visual language, voice, cultural context, and product behavior into brands that feel alive.',
+    items: ['Brand positioning', 'Identity systems', 'Creative direction', 'Digital brand expression'],
+  },
+  {
+    num: '03',
+    icon: 'layers',
+    title: 'Technology<br/>Consulting',
+    desc: 'Clear technical thinking without the theater. We help choose the right tools, architecture, workflows, and implementation paths.',
+    items: ['Technical strategy', 'AI & automation', 'Systems planning', 'Build / buy / integrate'],
+  },
+];
+---
+
+<section id="services" class="services site-section">
+  <div class="fp-label services__label">01 / Services</div>
+  <div class="fp-divider"></div>
+  <h2 class="fp-display services__heading">
+    Three ways we help move ideas forward with active imagination.
+  </h2>
+  <div class="services__grid">
+    {services.map((s) => (
+      <div class="services__card">
+        <div class="services__icon">
+          {s.icon === 'box' && (
+            <svg width="28" height="36" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1"><rect x="4" y="4" width="20" height="26"/><rect x="9" y="9" width="10" height="10"/></svg>
+          )}
+          {s.icon === 'circle' && (
+            <svg width="28" height="36" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1"><circle cx="14" cy="14" r="10"/><circle cx="14" cy="14" r="5"/><circle cx="14" cy="14" r="1.5" fill="currentColor" stroke="none"/></svg>
+          )}
+          {s.icon === 'layers' && (
+            <svg width="28" height="36" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1"><rect x="4" y="7" width="20" height="5"/><rect x="4" y="16" width="20" height="5"/><line x1="4" y1="5" x2="4" y2="23"/></svg>
+          )}
+        </div>
+        <div class="fp-label services__num">{s.num}</div>
+        <h3 class="fp-display services__title" set:html={s.title} />
+        <p class="fp-body services__desc">{s.desc}</p>
+        <div class="fp-divider"></div>
+        <div class="services__items">
+          {s.items.map((item) => (
+            <div class="fp-label services__item">{item}</div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

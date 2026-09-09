@@ -1,0 +1,55 @@
+/* Phantom Noir — default dark: premium / cinematic */
+[data-theme="noir"], .theme-noir {
+  --color-bg: #0A0A0A;
+  --color-surface: #141414;
+  --color-surface-raised: #1C1C1C;
+  --color-fg: #F4F4F2;
+  --color-muted: #A7ADB2;
+  --color-faint: rgba(244,244,242,0.10);
+  --color-accent: #C6FF00;
+  --color-accent-alt: #FF5A00;
+  --color-border: rgba(244,244,242,0.18);
+  --color-border-strong: rgba(244,244,242,0.35);
+}
+
+/* Concrete Field — light: editorial / clear / useful */
+[data-theme="field"], .theme-field {
+  --color-bg: #F4F4F2;
+  --color-surface: #FFFFFF;
+  --color-surface-raised: #E8E8E5;
+  --color-fg: #0A0A0A;
+  --color-muted: #63686D;
+  --color-faint: rgba(10,10,10,0.07);
+  --color-accent: #C6FF00;
+  --color-accent-alt: #FF5A00;
+  --color-border: rgba(10,10,10,0.18);
+  --color-border-strong: rgba(10,10,10,0.35);
+}
+
+/* Deep Field — teal: technical / reflective / immersive */
+[data-theme="deep"], .theme-deep {
+  --color-bg: #0F2D3A;
+  --color-surface: #162F3C;
+  --color-surface-raised: #1E3A48;
+  --color-fg: #F4F4F2;
+  --color-muted: #A7ADB2;
+  --color-faint: rgba(244,244,242,0.10);
+  --color-accent: #C6FF00;
+  --color-accent-alt: #FF5A00;
+  --color-border: rgba(244,244,242,0.18);
+  --color-border-strong: rgba(244,244,242,0.35);
+}
+
+/* Signal — orange: interrupt / announcement / energy */
+[data-theme="signal"], .theme-signal {
+  --color-bg: #FF5A00;
+  --color-surface: #FF6615;
+  --color-surface-raised: #FF7A2A;
+  --color-fg: #0A0A0A;
+  --color-muted: rgba(10,10,10,0.60);
+  --color-faint: rgba(10,10,10,0.10);
+  --color-accent: #0A0A0A;
+  --color-accent-alt: #C6FF00;
+  --color-border: rgba(10,10,10,0.22);
+  --color-border-strong: rgba(10,10,10,0.45);
+}

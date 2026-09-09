@@ -1,0 +1,30 @@
+---
+/**
+ * Approach / Point of View section — headline + three trait cards.
+ * Structure only; styles in structure.css + presentation.css.
+ */
+const traits = [
+  { id: 'A', title: 'Culture-aware', desc: 'We pay attention to how people actually live, choose, collect, share, and care.' },
+  { id: 'B', title: 'Technology-literate', desc: 'We use technology as material — not spectacle — and care deeply about how things work.' },
+  { id: 'C', title: 'Small by design', desc: 'Senior attention, direct collaboration, and enough flexibility to follow the interesting thread.' },
+];
+---
+
+<section id="approach" class="approach site-section">
+  <div class="fp-label approach__label">02 / Point of view</div>
+  <div class="fp-divider"></div>
+  <div class="approach__grid">
+    <h2 class="fp-display approach__heading">
+      We're drawn to the things that don't fit neatly in one box.
+    </h2>
+    <div class="approach__cards">
+      {traits.map((t) => (
+        <div class="approach__card">
+          <div class="fp-label approach__card-id">{t.id}</div>
+          <div class="fp-display approach__card-title">{t.title}</div>
+          <div class="fp-body approach__card-desc">{t.desc}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

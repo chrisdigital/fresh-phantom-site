@@ -1,0 +1,27 @@
+# Build
+dist/
+.astro/
+
+# Design system source (reference only — not part of deployed site)
+Fresh Phantom Design System/
+Fresh Phantom Design System.zip
+ghos_phantom_grid.ai
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+
+# Cloudflare
+.wrangler/
+.dev.vars
+
+# IDE
+.vscode/
+*.swp

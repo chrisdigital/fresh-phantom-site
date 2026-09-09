@@ -1,0 +1,25 @@
+:root {
+  /* Raw palette */
+  --phantom-black: #0A0A0A;
+  --ghost-white: #F4F4F2;
+  --concrete: #8A8F95;
+  --concrete-mid: #63686D;
+  --volt: #C6FF00;
+  --signal-orange: #FF5A00;
+  --deep-teal: #0F2D3A;
+
+  /* Extended palette */
+  --warm-white: #ECECE8;
+
+  /* Default semantic — Phantom Noir (dark) */
+  --color-bg: #0A0A0A;
+  --color-surface: #141414;
+  --color-surface-raised: #1C1C1C;
+  --color-fg: #F4F4F2;
+  --color-muted: #A7ADB2;
+  --color-faint: rgba(244,244,242,0.10);
+  --color-accent: #C6FF00;
+  --color-accent-alt: #FF5A00;
+  --color-border: rgba(244,244,242,0.18);
+  --color-border-strong: rgba(244,244,242,0.35);
+}

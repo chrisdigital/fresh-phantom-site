@@ -1,0 +1,32 @@
+---
+/**
+ * Base layout — HTML shell, global CSS import, meta.
+ */
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Fresh Phantom Labs",
+  description = "Cultural tastemaker and boutique technology firm. Products, brands, and digital experiences for ideas that deserve more than an ordinary solution.",
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={description} />
+  <title>{title}</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/fresh_phantom_icon_final.svg" />
+</head>
+<body data-theme="field">
+  <slot />
+</body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

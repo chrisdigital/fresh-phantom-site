@@ -1,0 +1,27 @@
+---
+/**
+ * Site footer with brand lockup and legal links.
+ * Structure only; styles in structure.css + presentation.css.
+ */
+import GhostLogo from './GhostLogo.astro';
+---
+
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <GhostLogo height={26} />
+      <span class="fp-bricker footer__wordmark">FRESH PHANTOM</span>
+    </div>
+    <div class="fp-label footer__tagline">Cultural taste. Product thinking. Useful technology.</div>
+    <a href="#home" class="fp-label footer__back">Back to top ↑</a>
+  </div>
+  <div class="fp-divider"></div>
+  <div class="footer__bottom">
+    <span class="fp-label footer__copyright">Copyright 2026. All Rights Reserved.</span>
+    <div class="footer__links">
+      <a href="#" class="fp-label footer__link">Terms</a>
+      <a href="#" class="fp-label footer__link">Privacy</a>
+      <a href="#" class="fp-label footer__link">Legal</a>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'AyrBrickerBlack';
+  src: url('/fonts/AyrBrickerBlack.woff2') format('woff2'),
+       url('/fonts/AyrBrickerBlack.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CAMechanoCondensed';
+  src: url('/fonts/CAMechano-Condensed.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CAMechano';
+  src: url('/fonts/CAMechano-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CAMechanoWide';
+  src: url('/fonts/CAMechano-Wide.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --font-display: 'Inter', sans-serif;
+  --font-display-editorial: 'AyrBrickerBlack', sans-serif;
+  --font-display-mechanical: 'CAMechano', sans-serif;
+  --font-display-mechanical-condensed: 'CAMechanoCondensed', sans-serif;
+  --font-display-mechanical-wide: 'CAMechanoWide', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* Display — Inter Bold, sentence case */
+  --text-display-size: clamp(48px, 8vw, 96px);
+  --text-display-leading: 0.88;
+  --text-display-tracking: -0.04em;
+
+  /* H1 */
+  --text-h1-size: clamp(36px, 5vw, 64px);
+  --text-h1-leading: 0.92;
+  --text-h1-tracking: -0.03em;
+
+  /* H2 */
+  --text-h2-size: clamp(24px, 3vw, 40px);
+  --text-h2-leading: 0.96;
+  --text-h2-tracking: -0.025em;
+
+  /* H3 */
+  --text-h3-size: 18px;
+  --text-h3-leading: 1.0;
+  --text-h3-tracking: -0.02em;
+
+  /* Body */
+  --text-body-size: 16px;
+  --text-body-leading: 1.5;
+
+  /* Small */
+  --text-small-size: 13px;
+  --text-small-leading: 1.45;
+
+  /* Utility / mono metadata */
+  --text-utility-size: 11px;
+  --text-utility-leading: 1.4;
+  --text-utility-tracking: 0.12em;
+}

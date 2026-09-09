@@ -1,0 +1,32 @@
+---
+/**
+ * Fixed top navigation bar — structure only.
+ * Scroll behavior in separate script tag.
+ * Styles in structure.css + presentation.css.
+ */
+import GhostLogo from './GhostLogo.astro';
+---
+
+<header id="site-nav" class="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__brand">
+      <GhostLogo height={30} />
+      <span class="fp-bricker nav__wordmark">FRESH PHANTOM</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#services" class="fp-label nav__link">Services</a>
+      <a href="#approach" class="fp-label nav__link">Approach</a>
+      <a href="#inquiry" class="fp-label nav__link">Inquiry</a>
+    </nav>
+    <a href="#inquiry" class="nav__cta fp-label">Start something interesting</a>
+  </div>
+</header>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  if (nav) {
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 30);
+    });
+  }
+</script>
