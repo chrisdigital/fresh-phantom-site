@@ -77,7 +77,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   try {
     const { error } = await resend.emails.send({
-      from: "Fresh Phantom <noreply@freshphantom.com>",
+      from: "Fresh Phantom <no-reply@msg.freshphantom.com>",
       to: [toEmail],
       replyTo: email,
       subject: `Inquiry from ${name}${company ? ` (${company})` : ""}`,
