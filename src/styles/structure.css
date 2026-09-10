@@ -48,6 +48,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
 }
 
 .hero__content {
@@ -56,6 +70,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero__grid {
@@ -75,6 +91,8 @@
 .hero__bottom {
   padding: 0 48px 40px;
   margin-top: 60px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero__pillars {

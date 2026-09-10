@@ -82,6 +82,11 @@
   background: var(--warm-white, #ECECE8);
 }
 
+.hero__bg {
+  background-image: url('/assets/headshot_2.png');
+  opacity: 0.3;
+}
+
 .hero__eyebrow {
   font-size: 0.85em;
   color: var(--color-muted, #63686D);
