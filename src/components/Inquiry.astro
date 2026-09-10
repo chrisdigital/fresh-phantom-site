@@ -4,6 +4,7 @@
  * Structure only; form behavior in script tag below.
  * Styles in structure.css + presentation.css.
  */
+const turnstileSiteKey = import.meta.env.TURNSTILE_SITE_KEY ?? '';
 ---
 
 <section id="inquiry" class="inquiry site-section">
@@ -81,6 +82,7 @@
             <input id="inquiry-timing" name="timing" type="text" placeholder="Flexible" class="inquiry__input" />
           </div>
         </div>
+        <div class="cf-turnstile inquiry__turnstile" data-sitekey={turnstileSiteKey} data-theme="dark" data-size="flexible"></div>
         <button type="submit" class="inquiry__submit">
           <span>Send inquiry</span>
           <span>&nearr;</span>

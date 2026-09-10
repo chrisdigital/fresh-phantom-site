@@ -21,7 +21,10 @@ interface InquiryPayload {
   budget?: string;
   timing?: string;
   website?: string;
+  turnstile_token?: string;
 }
+
+const TURNSTILE_VERIFY_URL = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
 
 const SERVICE_LABELS: Record<string, string> = {
   product: "Product Development",
@@ -32,9 +35,10 @@ const SERVICE_LABELS: Record<string, string> = {
 export const POST: APIRoute = async ({ request }) => {
   const apiKey = (import.meta.env.RESEND_API_KEY ?? "") as string;
   const toEmail = (import.meta.env.CONTACT_TO_EMAIL ?? "") as string;
+  const turnstileSecret = (import.meta.env.TURNSTILE_SECRET_KEY ?? "") as string;
 
-  if (!apiKey || !toEmail) {
-    console.error("[contact] Missing RESEND_API_KEY or CONTACT_TO_EMAIL env var.");
+  if (!apiKey || !toEmail || !turnstileSecret) {
+    console.error("[contact] Missing RESEND_API_KEY, CONTACT_TO_EMAIL, or TURNSTILE_SECRET_KEY env var.");
     return new Response(
       JSON.stringify({ error: "Server configuration error." }),
       { status: 500, headers: { "Content-Type": "application/json" } },
@@ -51,13 +55,47 @@ export const POST: APIRoute = async ({ request }) => {
     );
   }
 
-  const { name, email, phone, company, service, message, budget, timing, website } = body;
+  const { name, email, phone, company, service, message, budget, timing, website, turnstile_token } = body;
 
   /* Honeypot — silently accept but do not send */
   if (website) {
     return new Response(
       JSON.stringify({ ok: true }),
       { status: 200, headers: { "Content-Type": "application/json" } },
+    );
+  }
+
+  /* Turnstile verification */
+  if (!turnstile_token) {
+    return new Response(
+      JSON.stringify({ error: "Verification challenge is required." }),
+      { status: 400, headers: { "Content-Type": "application/json" } },
+    );
+  }
+
+  try {
+    const tsForm = new URLSearchParams();
+    tsForm.append("secret", turnstileSecret);
+    tsForm.append("response", turnstile_token);
+
+    const tsRes = await fetch(TURNSTILE_VERIFY_URL, {
+      method: "POST",
+      body: tsForm,
+    });
+    const tsResult = (await tsRes.json()) as { success: boolean; "error-codes"?: string[] };
+
+    if (!tsResult.success) {
+      console.error("[contact] Turnstile verification failed:", tsResult["error-codes"]);
+      return new Response(
+        JSON.stringify({ error: "Verification failed. Please try again." }),
+        { status: 403, headers: { "Content-Type": "application/json" } },
+      );
+    }
+  } catch (err) {
+    console.error("[contact] Turnstile verification error:", err);
+    return new Response(
+      JSON.stringify({ error: "Verification service unavailable. Please try again." }),
+      { status: 500, headers: { "Content-Type": "application/json" } },
     );
   }
 

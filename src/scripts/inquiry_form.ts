@@ -6,6 +6,8 @@
  * matching the DS Input component error pattern (orange border, error span).
  */
 
+declare const turnstile: { reset: (id?: string) => void } | undefined;
+
 function initInquiryForm(): void {
   const form = document.getElementById('inquiry-form') as HTMLFormElement | null;
   const status = document.getElementById('inquiry-status');
@@ -97,8 +99,23 @@ function initInquiryForm(): void {
       return;
     }
 
-    /* Strip verify and honeypot fields before sending */
-    const { verify_email: _ve, verify_phone: _vp, website: _hp, ...data } = formData;
+    /* Turnstile token check */
+    const turnstileToken = formData['cf-turnstile-response'] || '';
+    if (!turnstileToken) {
+      status.textContent = 'Please complete the verification challenge.';
+      status.className = 'inquiry__status inquiry__status--error';
+      return;
+    }
+
+    /* Strip verify, honeypot, and turnstile fields — send token separately */
+    const {
+      verify_email: _ve,
+      verify_phone: _vp,
+      website: _hp,
+      'cf-turnstile-response': _ts,
+      ...data
+    } = formData;
+    (data as Record<string, string>).turnstile_token = turnstileToken;
 
     status.textContent = 'Sending\u2026';
     status.className = 'inquiry__status inquiry__status--sending';
@@ -114,14 +131,17 @@ function initInquiryForm(): void {
         status.textContent = "Sent \u2014 we\u2019ll be in touch.";
         status.className = 'inquiry__status inquiry__status--success';
         form.reset();
+        if (typeof turnstile !== 'undefined') turnstile.reset();
       } else {
         const body = await res.json().catch(() => ({})) as Record<string, string>;
         status.textContent = body.error || 'Something went wrong. Please try again.';
         status.className = 'inquiry__status inquiry__status--error';
+        if (typeof turnstile !== 'undefined') turnstile.reset();
       }
     } catch {
       status.textContent = 'Network error. Please try again.';
       status.className = 'inquiry__status inquiry__status--error';
+      if (typeof turnstile !== 'undefined') turnstile.reset();
     }
   });
 }

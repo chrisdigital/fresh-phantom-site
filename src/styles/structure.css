@@ -205,6 +205,10 @@
   margin-bottom: 1.75em;
 }
 
+.inquiry__turnstile {
+  margin-bottom: 1.25em;
+}
+
 .inquiry__submit {
   width: 100%;
   display: flex;
