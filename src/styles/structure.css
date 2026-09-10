@@ -254,6 +254,49 @@
   gap: 24px;
 }
 
+/* ── Prose page (legal, privacy, terms) ────────────── */
+
+.prose-page {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.prose-page__header {
+  margin-bottom: 48px;
+}
+
+.prose-page__body {
+  max-width: 40em;
+}
+
+.prose-page__body h2 {
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+.prose-page__body h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose-page__body p {
+  margin-bottom: 1em;
+}
+
+.prose-page__body ul,
+.prose-page__body ol {
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+.prose-page__body li {
+  margin-bottom: 0.4em;
+}
+
+.prose-page__body a {
+  text-decoration: underline;
+}
+
 /* ── Shared structural elements ────────────────────── */
 
 .fp-divider {

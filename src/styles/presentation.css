@@ -377,6 +377,54 @@
   color: var(--color-muted, #A7ADB2);
 }
 
+/* -- Prose page ------------------------------------------- */
+
+.prose-page {
+  background: var(--warm-white, #ECECE8);
+}
+
+.prose-page__label {
+  font-size: 0.7em;
+  color: var(--color-muted, #63686D);
+  margin-bottom: 0.75em;
+}
+
+.prose-page__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  color: var(--color-fg, #0A0A0A);
+}
+
+.prose-page__date {
+  font-size: 0.85em;
+  color: var(--color-muted, #63686D);
+  margin-top: 0.75em;
+}
+
+.prose-page__body {
+  font-size: 1em;
+  line-height: 1.7;
+  color: var(--color-fg, #0A0A0A);
+}
+
+.prose-page__body h2 {
+  font-size: 1.25em;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-fg, #0A0A0A);
+}
+
+.prose-page__body h3 {
+  font-size: 1.05em;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-fg, #0A0A0A);
+}
+
+.prose-page__body a {
+  color: var(--color-fg, #0A0A0A);
+}
+
 /* -- Footer ----------------------------------------------- */
 
 .footer {
