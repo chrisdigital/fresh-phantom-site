@@ -241,7 +241,7 @@
 }
 
 .approach__card-title {
-  font-size: 0.975em;
+  font-size: 1.25em;
   font-weight: 700;
   line-height: 1.1;
   color: var(--color-fg, #0A0A0A);
@@ -249,7 +249,7 @@
 }
 
 .approach__card-desc {
-  font-size: 0.9em;
+  font-size: 1em;
   color: var(--color-muted, #63686D);
 }
 
