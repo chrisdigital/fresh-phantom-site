@@ -405,16 +405,6 @@
   }
 
   .services__card {
-    text-align: center;
-  }
-
-  .services__icon {
-    display: flex;
-    justify-content: center;
-  }
-
-  .services__items {
-    display: inline-block;
     text-align: left;
   }
 
