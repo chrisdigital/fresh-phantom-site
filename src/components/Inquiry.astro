@@ -20,28 +20,28 @@
         <div class="fp-body inquiry__meta-text">New products, identity work, digital systems, experiments, and unusual problems.</div>
       </div>
       <div class="inquiry__meta">
-        <div class="fp-label inquiry__meta-label">Typical scope</div>
-        <div class="fp-body inquiry__meta-text">$10k &ndash; $150k+ depending on complexity and duration.</div>
+        <div class="fp-label inquiry__meta-label">Working style</div>
+        <div class="fp-body inquiry__meta-text">Focused engagements, embedded collaboration, and scoped advisory work.</div>
       </div>
     </div>
-    <div>
+    <div class="inquiry__form-panel" data-theme="noir">
       <form id="inquiry-form">
         <div class="inquiry__row">
           <div class="inquiry__field">
-            <label class="fp-label inquiry__field-label" for="inquiry-name">Name</label>
+            <label class="inquiry__field-label" for="inquiry-name">Name</label>
             <input id="inquiry-name" name="name" type="text" placeholder="Your name" required class="inquiry__input" />
           </div>
           <div class="inquiry__field">
-            <label class="fp-label inquiry__field-label" for="inquiry-email">Email</label>
+            <label class="inquiry__field-label" for="inquiry-email">Email</label>
             <input id="inquiry-email" name="email" type="email" placeholder="you@company.com" required class="inquiry__input" />
           </div>
         </div>
         <div class="inquiry__field">
-          <label class="fp-label inquiry__field-label" for="inquiry-company">Company / Project</label>
+          <label class="inquiry__field-label" for="inquiry-company">Company / Project</label>
           <input id="inquiry-company" name="company" type="text" placeholder="Optional" class="inquiry__input" />
         </div>
         <div class="inquiry__field">
-          <label class="fp-label inquiry__field-label" for="inquiry-service">What can we help with?</label>
+          <label class="inquiry__field-label" for="inquiry-service">What can we help with?</label>
           <select id="inquiry-service" name="service" class="inquiry__input inquiry__select">
             <option value="" disabled selected>Select a service</option>
             <option value="product">Product Development</option>
@@ -50,22 +50,22 @@
           </select>
         </div>
         <div class="inquiry__field">
-          <label class="fp-label inquiry__field-label" for="inquiry-message">Tell us about it</label>
+          <label class="inquiry__field-label" for="inquiry-message">Tell us about it</label>
           <textarea id="inquiry-message" name="message" rows="3" placeholder="What are you making? What makes it interesting?" class="inquiry__input inquiry__textarea"></textarea>
         </div>
-        <div class="inquiry__row">
+        <div class="inquiry__row inquiry__row--last">
           <div class="inquiry__field">
-            <label class="fp-label inquiry__field-label" for="inquiry-budget">Budget</label>
+            <label class="inquiry__field-label" for="inquiry-budget">Budget</label>
             <input id="inquiry-budget" name="budget" type="text" placeholder="Not sure yet" class="inquiry__input" />
           </div>
           <div class="inquiry__field">
-            <label class="fp-label inquiry__field-label" for="inquiry-timing">Timing</label>
+            <label class="inquiry__field-label" for="inquiry-timing">Timing</label>
             <input id="inquiry-timing" name="timing" type="text" placeholder="Flexible" class="inquiry__input" />
           </div>
         </div>
         <button type="submit" class="inquiry__submit">
           <span>Send inquiry</span>
-          <span>↗</span>
+          <span>&nearr;</span>
         </button>
         <div id="inquiry-status" class="inquiry__status" aria-live="polite"></div>
       </form>

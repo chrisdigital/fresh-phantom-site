@@ -140,32 +140,43 @@
   margin-top: 52px;
 }
 
+.inquiry__form-panel {
+  padding: 2.5em 2.25em;
+}
+
 .inquiry__field {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125em;
+  margin-bottom: 1.25em;
 }
 
 .inquiry__field-label {
   display: block;
-  margin-bottom: 5px;
 }
 
 .inquiry__input {
   width: 100%;
-  padding: 10px 14px;
+  padding: 0.625em 0.875em;
+}
+
+.inquiry__select {
+  padding: 0.6875em 0.875em;
+  appearance: none;
 }
 
 .inquiry__textarea {
   resize: vertical;
 }
 
-.inquiry__select {
-  appearance: none;
-}
-
 .inquiry__row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 1.25em;
+}
+
+.inquiry__row--last {
+  margin-bottom: 1.75em;
 }
 
 .inquiry__submit {
@@ -173,13 +184,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 6px;
-  padding: 14px 28px;
+  gap: 0.375em;
+  padding: 0.875em 1.75em;
 }
 
 .inquiry__status {
-  margin-top: 12px;
-  min-height: 20px;
+  margin-top: 0.75em;
+  min-height: 1.25em;
 }
 
 /* ── Footer ────────────────────────────────────────── */

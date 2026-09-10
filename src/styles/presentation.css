@@ -298,8 +298,16 @@
   color: var(--color-muted, #63686D);
 }
 
+.inquiry__form-panel {
+  background: var(--phantom-black, #0A0A0A);
+}
+
 .inquiry__field-label {
+  font-family: var(--font-display-mechanical-condensed, 'CAMechanoCondensed', sans-serif);
   font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: var(--color-muted, #63686D);
 }
 
