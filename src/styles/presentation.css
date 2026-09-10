@@ -18,8 +18,8 @@
 }
 
 .fp-bricker {
-  font-family: var(--font-display-editorial, 'AyrBrickerBlack', sans-serif);
-  font-weight: 900;
+  font-family: 'Killarney', var(--font-display-editorial, 'AyrBrickerBlack', sans-serif);
+  font-weight: normal;
 }
 
 .fp-body {
