@@ -139,7 +139,7 @@ export const POST: APIRoute = async ({ request }) => {
       ${summaryTable}
       <hr style="border:none;border-top:1px solid #E0E0E0;margin:28px 0;" />
       <p style="font-size:12px;line-height:1.5;color:#63686D;margin:0;">
-        This is an automated confirmation. Please do not reply to this email. If you need to reach us directly, email <a href="mailto:admin@freshphantom.com" style="color:#63686D;">admin@freshphantom.com</a>.
+        This is an automated confirmation. Please do not reply to this email. If you need to reach us directly, email <a href="mailto:hello@freshphantom.com" style="color:#63686D;">hello@freshphantom.com</a>.
       </p>
     </div>
   `;
