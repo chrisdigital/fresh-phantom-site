@@ -108,6 +108,10 @@
   padding: 32px 28px;
 }
 
+.services__title-line {
+  display: block;
+}
+
 .services__items {
   margin-top: 12px;
 }
@@ -414,8 +418,8 @@
     text-align: left;
   }
 
-  .services__title-br {
-    display: none;
+  .services__title-line {
+    display: inline;
   }
 
   .inquiry__row {
