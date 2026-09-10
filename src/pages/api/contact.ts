@@ -20,6 +20,7 @@ interface InquiryPayload {
   message?: string;
   budget?: string;
   timing?: string;
+  website?: string;
 }
 
 const SERVICE_LABELS: Record<string, string> = {
@@ -50,7 +51,15 @@ export const POST: APIRoute = async ({ request }) => {
     );
   }
 
-  const { name, email, phone, company, service, message, budget, timing } = body;
+  const { name, email, phone, company, service, message, budget, timing, website } = body;
+
+  /* Honeypot — silently accept but do not send */
+  if (website) {
+    return new Response(
+      JSON.stringify({ ok: true }),
+      { status: 200, headers: { "Content-Type": "application/json" } },
+    );
+  }
 
   if (!name || !email) {
     return new Response(

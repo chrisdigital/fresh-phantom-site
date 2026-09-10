@@ -89,8 +89,16 @@ function initInquiryForm(): void {
       return;
     }
 
-    /* Strip verify fields before sending */
-    const { verify_email: _ve, verify_phone: _vp, ...data } = formData;
+    /* Honeypot check */
+    if (formData.website?.trim()) {
+      status.textContent = "Sent \u2014 we\u2019ll be in touch.";
+      status.className = 'inquiry__status inquiry__status--success';
+      form.reset();
+      return;
+    }
+
+    /* Strip verify and honeypot fields before sending */
+    const { verify_email: _ve, verify_phone: _vp, website: _hp, ...data } = formData;
 
     status.textContent = 'Sending\u2026';
     status.className = 'inquiry__status inquiry__status--sending';

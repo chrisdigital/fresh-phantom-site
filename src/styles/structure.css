@@ -158,6 +158,14 @@
   margin-top: 52px;
 }
 
+.inquiry__hp {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 .inquiry__form-panel {
   padding: 2.5em 2.25em;
 }
