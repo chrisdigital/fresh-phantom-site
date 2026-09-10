@@ -70,22 +70,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   position: relative;
   z-index: 1;
-}
-
-.hero__grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 64px;
-  align-items: end;
 }
 
 .hero__actions {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .hero__bottom {
@@ -319,11 +314,6 @@
 
   .hero__content {
     padding: 40px 28px 0;
-  }
-
-  .hero__grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
   }
 
   .hero__bottom {
