@@ -313,14 +313,14 @@
 
 .inquiry__input {
   background: transparent;
-  border: 1px solid rgba(10, 10, 10, 0.3);
+  border: 1px solid var(--color-border-strong, rgba(244,244,242,0.35));
   font-size: 1.05em;
-  color: var(--color-fg, #0A0A0A);
+  color: var(--color-fg, #F4F4F2);
   outline: none;
 }
 
 .inquiry__input:focus {
-  border-color: var(--color-fg, #0A0A0A);
+  border-color: var(--color-fg, #F4F4F2);
 }
 
 .inquiry__submit {
