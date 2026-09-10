@@ -389,9 +389,33 @@
     margin-top: 40px;
   }
 
+  .nav__cta {
+    max-width: 50%;
+    text-align: center;
+  }
+
   .hero__pillars {
     flex-direction: column;
     gap: 6px;
+    align-items: center;
+  }
+
+  .services__card {
+    text-align: center;
+  }
+
+  .services__icon {
+    display: flex;
+    justify-content: center;
+  }
+
+  .services__items {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .services__title {
+    white-space: nowrap;
   }
 
   .inquiry__row {
