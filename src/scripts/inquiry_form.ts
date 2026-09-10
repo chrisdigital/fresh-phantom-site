@@ -14,7 +14,21 @@ function initInquiryForm(): void {
     status.textContent = 'Sending\u2026';
     status.className = 'inquiry__status';
 
-    const data = Object.fromEntries(new FormData(form));
+    const formData = Object.fromEntries(new FormData(form)) as Record<string, string>;
+
+    if (formData.email !== formData.verify_email) {
+      status.textContent = 'Email addresses do not match.';
+      status.classList.add('inquiry__status--error');
+      return;
+    }
+
+    if (formData.phone && formData.phone !== formData.verify_phone) {
+      status.textContent = 'Phone numbers do not match.';
+      status.classList.add('inquiry__status--error');
+      return;
+    }
+
+    const { verify_email: _ve, verify_phone: _vp, ...data } = formData;
 
     try {
       const res = await fetch('/api/contact', {

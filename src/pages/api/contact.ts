@@ -14,6 +14,7 @@ export const prerender = false;
 interface InquiryPayload {
   name?: string;
   email?: string;
+  phone?: string;
   company?: string;
   service?: string;
   message?: string;
@@ -49,7 +50,7 @@ export const POST: APIRoute = async ({ request }) => {
     );
   }
 
-  const { name, email, company, service, message, budget, timing } = body;
+  const { name, email, phone, company, service, message, budget, timing } = body;
 
   if (!name || !email) {
     return new Response(
@@ -65,6 +66,7 @@ export const POST: APIRoute = async ({ request }) => {
     <table style="border-collapse:collapse;font-family:sans-serif;font-size:14px;">
       <tr><td style="padding:6px 12px 6px 0;font-weight:bold;">Name</td><td>${name}</td></tr>
       <tr><td style="padding:6px 12px 6px 0;font-weight:bold;">Email</td><td><a href="mailto:${email}">${email}</a></td></tr>
+      <tr><td style="padding:6px 12px 6px 0;font-weight:bold;">Phone</td><td>${phone || "—"}</td></tr>
       <tr><td style="padding:6px 12px 6px 0;font-weight:bold;">Company</td><td>${company || "—"}</td></tr>
       <tr><td style="padding:6px 12px 6px 0;font-weight:bold;">Service</td><td>${serviceLabel}</td></tr>
       <tr><td style="padding:6px 12px 6px 0;font-weight:bold;">Message</td><td>${message || "—"}</td></tr>
