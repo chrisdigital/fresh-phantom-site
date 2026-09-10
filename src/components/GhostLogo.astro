@@ -2,13 +2,13 @@
 /**
  * Fresh Phantom ghost mark — layered icon system.
  *
- * Three layers stacked via CSS:
- *   1. Color div (background) — accepts `color` prop as background-color
- *   2. Mask SVG — cutout silhouette that reveals the color through the shape
- *   3. Icon SVG — detailed artwork on top
+ * Two layers stacked via CSS:
+ *   1. Color div — masked with the ghost shape via CSS mask-image,
+ *      so the color only shows through the silhouette cutout.
+ *   2. Icon SVG — detailed artwork on top.
  *
- * Change the `color` prop to change the icon color. Can be animated
- * by targeting `.ghost-logo__color` with CSS transitions/animations.
+ * Change the `color` prop to change the ghost fill color.
+ * Animate by targeting `.ghost-logo__color` with CSS transitions.
  */
 interface Props {
   height?: number;
@@ -23,6 +23,5 @@ const width = Math.round(height * aspectRatio);
 
 <div class="ghost-logo" style={`width:${width}px;height:${height}px;`} aria-label="Fresh Phantom ghost mark" role="img">
   <div class="ghost-logo__color" style={`background-color:${color};`}></div>
-  <img class="ghost-logo__mask" src="/assets/fresh_phantom_icon_mask.svg" alt="" width={width} height={height} />
   <img class="ghost-logo__icon" src="/assets/fresh_phantom_icon_icon.svg" alt="" width={width} height={height} />
 </div>

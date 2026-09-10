@@ -306,7 +306,6 @@
 }
 
 .ghost-logo__color,
-.ghost-logo__mask,
 .ghost-logo__icon {
   position: absolute;
   top: 0;
@@ -317,14 +316,18 @@
 
 .ghost-logo__color {
   z-index: 1;
-}
-
-.ghost-logo__mask {
-  z-index: 2;
+  -webkit-mask-image: url('/assets/fresh_phantom_icon_icon.svg');
+  mask-image: url('/assets/fresh_phantom_icon_icon.svg');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 
 .ghost-logo__icon {
-  z-index: 3;
+  z-index: 2;
 }
 
 /* ── Shared structural elements ────────────────────── */
