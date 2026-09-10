@@ -5,11 +5,13 @@
 interface Props {
   title?: string;
   description?: string;
+  noindex?: boolean;
 }
 
 const {
   title = "Fresh Phantom",
   description = "Cultural tastemaker and boutique technology firm. Products, brands, and digital experiences for ideas that deserve more than an ordinary solution.",
+  noindex = false,
 } = Astro.props;
 ---
 
@@ -19,6 +21,7 @@ const {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
   <title>{title}</title>
   <link rel="icon" type="image/svg+xml" href="/assets/fresh_phantom_icon_final.svg" />
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>

@@ -7,7 +7,7 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Base title="Legal — Fresh Phantom">
+<Base title="Legal — Fresh Phantom" noindex>
   <Nav />
   <main class="prose-page site-section">
     <div class="prose-page__header">
@@ -17,10 +17,6 @@ import Footer from '../components/Footer.astro';
       <div class="fp-label prose-page__date">Effective: September 9, 2026</div>
     </div>
     <div class="prose-page__body">
-      <h2>Company</h2>
-      <p>Fresh Phantom is operated by DSGNR Unlimited, LLC dba Fresh Phantom, a company registered in the State of New York.</p>
-      <p>DSGNR Unlimited, LLC dba Fresh Phantom<br/>2248 Broadway # 1962<br/>New York, NY 10024</p>
-
       <h2>Intellectual Property</h2>
       <p>All content, design, graphics, logos, trademarks, trade names, typefaces, software, and other materials on this site are the property of Fresh Phantom or its licensors. Nothing on this site grants any license or right to use any intellectual property without prior written consent.</p>
 
@@ -47,6 +43,10 @@ import Footer from '../components/Footer.astro';
 
       <h2>Contact</h2>
       <p>Legal inquiries may be submitted through our <a href="/#inquiry">inquiry form</a>.</p>
+
+      <h2>Company</h2>
+      <p>Fresh Phantom is operated by DSGNR Unlimited, LLC dba Fresh Phantom, a company registered in the State of New York.</p>
+      <p>DSGNR Unlimited, LLC dba Fresh Phantom<br/>2248 Broadway # 1962<br/>New York, NY 10024</p>
     </div>
   </main>
   <Footer />
