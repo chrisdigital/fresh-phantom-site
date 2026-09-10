@@ -16,6 +16,9 @@ Fresh Phantom *.md
 # Source SVGs (deployed copies are in public/assets/)
 fresh_phantom_icon_*.svg
 
+# Source font files and css (deployed copies are in public/fonts/)
+killarney-*
+
 # Dependencies
 node_modules/
 
