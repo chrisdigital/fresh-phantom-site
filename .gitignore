@@ -7,6 +7,9 @@ Fresh Phantom Design System/
 Fresh Phantom Design System.zip
 ghos_phantom_grid.ai
 
+# Source images (originals — deployed copies are in public/assets/)
+images/
+
 # Dependencies
 node_modules/
 
