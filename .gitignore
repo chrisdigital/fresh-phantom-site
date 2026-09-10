@@ -10,6 +10,9 @@ ghos_phantom_grid.ai
 # Source images (originals — deployed copies are in public/assets/)
 images/
 
+# Reference/source markdown docs (not part of deployed site)
+Fresh Phantom *.md
+
 # Dependencies
 node_modules/
 
