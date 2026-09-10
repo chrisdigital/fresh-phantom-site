@@ -131,7 +131,7 @@ export const POST: APIRoute = async ({ request }) => {
     <div style="font-family:sans-serif;font-size:14px;color:#0A0A0A;max-width:560px;">
       <h2 style="margin:0 0 16px;">Hi ${name},</h2>
       <p style="line-height:1.6;margin:0 0 20px;">
-        Thank you for reaching out to Fresh Phantom Labs. We\u2019ve received your inquiry and a member of our team will follow up within <strong>72 hours</strong>.
+        Thank you for reaching out to Fresh Phantom. We\u2019ve received your inquiry and a member of our team will follow up within <strong>72 hours</strong>.
       </p>
       <p style="line-height:1.6;margin:0 0 24px;">
         Here\u2019s a copy of what you submitted for your records:
@@ -168,7 +168,7 @@ export const POST: APIRoute = async ({ request }) => {
     const { error: confirmError } = await resend.emails.send({
       from: "Fresh Phantom <no-reply@msg.freshphantom.com>",
       to: [email],
-      subject: "We received your inquiry \u2014 Fresh Phantom Labs",
+      subject: "We received your inquiry \u2014 Fresh Phantom",
       html: confirmationHtml,
     });
 

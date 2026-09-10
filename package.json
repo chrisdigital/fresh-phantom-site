@@ -1,7 +1,7 @@
 {
   "name": "fresh-phantom-site",
   "version": "1.0.0",
-  "description": "Fresh Phantom Labs — marketing site",
+  "description": "Fresh Phantom — marketing site",
   "type": "module",
   "scripts": {
     "dev": "astro dev",

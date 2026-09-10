@@ -1,4 +1,4 @@
-# Fresh Phantom Labs — Marketing Site
+# Fresh Phantom — Marketing Site
 
 Astro site deployed to Cloudflare Pages. Contact form powered by Resend.
 
