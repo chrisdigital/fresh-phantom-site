@@ -55,7 +55,7 @@
 .hero__bg {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -150px;
   bottom: 0;
   width: 50%;
   background-position: center right;
