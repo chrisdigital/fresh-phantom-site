@@ -290,7 +290,6 @@
 .inquiry__body {
   font-size: 0.9375em;
   color: var(--color-muted, #63686D);
-  max-width: 21.25em;
   margin-bottom: 2.25em;
 }
 
