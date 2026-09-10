@@ -297,6 +297,36 @@
   text-decoration: underline;
 }
 
+/* ── Ghost logo (layered icon) ─────────────────────── */
+
+.ghost-logo {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.ghost-logo__color,
+.ghost-logo__mask,
+.ghost-logo__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ghost-logo__color {
+  z-index: 1;
+}
+
+.ghost-logo__mask {
+  z-index: 2;
+}
+
+.ghost-logo__icon {
+  z-index: 3;
+}
+
 /* ── Shared structural elements ────────────────────── */
 
 .fp-divider {
