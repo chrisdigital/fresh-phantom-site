@@ -71,8 +71,8 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  line-height: 1;
-  padding: 0.45em 1em;
+  line-height: 1.2;
+  padding: 0.5em 1.25em;
   border-radius: var(--radius-pill, 9999px);
 }
 
@@ -113,7 +113,7 @@
 }
 
 .hero__explore {
-  font-size: 0.7em;
+  font-size: 0.85em;
   color: var(--color-muted, #63686D);
 }
 
