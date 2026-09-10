@@ -288,7 +288,7 @@
 }
 
 .inquiry__body {
-  font-size: 0.9375em;
+  font-size: 1em;
   color: var(--color-muted, #63686D);
   margin-bottom: 2.25em;
 }
