@@ -414,8 +414,8 @@
     text-align: left;
   }
 
-  .services__title {
-    white-space: nowrap;
+  .services__title-br {
+    display: none;
   }
 
   .inquiry__row {
