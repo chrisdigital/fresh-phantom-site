@@ -48,13 +48,13 @@
 }
 
 .nav__wordmark {
-  font-size: 1em;
+  font-size: 1.05em;
   letter-spacing: -0.01em;
   color: var(--color-fg, #0A0A0A);
 }
 
 .nav__link {
-  font-size: 0.75em;
+  font-size: 0.85em;
   color: var(--color-muted, #63686D);
   transition: color 0.1s;
 }
@@ -67,7 +67,7 @@
   background: transparent;
   color: var(--color-fg, #0A0A0A);
   border: 1px solid var(--color-fg, #0A0A0A);
-  font-size: 0.75em;
+  font-size: 0.85em;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -83,7 +83,7 @@
 }
 
 .hero__eyebrow {
-  font-size: 0.75em;
+  font-size: 0.85em;
   color: var(--color-muted, #63686D);
   margin-bottom: 1.5em;
 }
@@ -106,12 +106,12 @@
 }
 
 .hero__explore {
-  font-size: 0.675em;
+  font-size: 0.7em;
   color: var(--color-muted, #63686D);
 }
 
 .hero__pillar {
-  font-size: 0.675em;
+  font-size: 0.7em;
   color: var(--color-muted, #63686D);
 }
 
@@ -148,7 +148,7 @@
 }
 
 .services__label {
-  font-size: 0.675em;
+  font-size: 0.7em;
   color: var(--color-muted, #63686D);
   margin-bottom: 0.75em;
 }
@@ -175,7 +175,7 @@
 }
 
 .services__num {
-  font-size: 0.825em;
+  font-size: 0.85em;
   color: var(--color-muted, #63686D);
   margin-bottom: 0.625em;
 }
@@ -195,7 +195,7 @@
 }
 
 .services__item {
-  font-size: 0.675em;
+  font-size: 0.7em;
   color: var(--color-muted, #63686D);
   border-left: 1px solid var(--color-border, rgba(10,10,10,0.12));
 }
@@ -207,7 +207,7 @@
 }
 
 .approach__label {
-  font-size: 0.675em;
+  font-size: 0.7em;
   color: var(--color-muted, #63686D);
   margin-bottom: 0.75em;
 }
@@ -227,7 +227,7 @@
 }
 
 .approach__card-id {
-  font-size: 0.675em;
+  font-size: 0.7em;
   color: var(--color-muted, #63686D);
   margin-bottom: 0.5em;
 }
@@ -264,7 +264,7 @@
 }
 
 .inquiry__label {
-  font-size: 0.675em;
+  font-size: 0.7em;
   color: var(--color-muted, #63686D);
   margin-bottom: 0.75em;
 }
@@ -288,7 +288,7 @@
 }
 
 .inquiry__meta-label {
-  font-size: 0.6em;
+  font-size: 0.7em;
   color: var(--color-muted, #63686D);
   margin-bottom: 0.375em;
 }
@@ -304,7 +304,7 @@
 
 .inquiry__field-label {
   font-family: var(--font-display-mechanical-condensed, 'CAMechanoCondensed', sans-serif);
-  font-size: 0.75em;
+  font-size: 0.85em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -364,7 +364,7 @@
 .footer__back,
 .footer__copyright,
 .footer__link {
-  font-size: 0.6em;
+  font-size: 0.7em;
   color: var(--color-muted, #63686D);
 }
 
