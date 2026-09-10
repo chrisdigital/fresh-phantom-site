@@ -13,6 +13,9 @@ images/
 # Reference/source markdown docs (not part of deployed site)
 Fresh Phantom *.md
 
+# Source SVGs (deployed copies are in public/assets/)
+fresh_phantom_icon_*.svg
+
 # Dependencies
 node_modules/
 
