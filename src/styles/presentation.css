@@ -322,10 +322,21 @@
   font-size: 1.05em;
   color: var(--color-fg, #F4F4F2);
   outline: none;
+  transition: border-color 0.15s;
 }
 
 .inquiry__input:focus {
   border-color: var(--color-fg, #F4F4F2);
+}
+
+.inquiry__input--error {
+  border-color: var(--signal-orange, #FF5A00);
+}
+
+.inquiry__field-error {
+  font-size: 0.85em;
+  color: var(--signal-orange, #FF5A00);
+  margin-top: 0.25em;
 }
 
 .inquiry__submit {
@@ -342,14 +353,28 @@
 
 .inquiry__status {
   font-size: 0.975em;
+  padding: 0.75em 1em;
+  border-radius: var(--radius-sm, 2px);
+}
+
+.inquiry__status:empty {
+  display: none;
 }
 
 .inquiry__status--success {
-  color: var(--deep-teal, #0F2D3A);
+  background: rgba(198, 255, 0, 0.12);
+  color: var(--volt, #C6FF00);
+  border: 1px solid rgba(198, 255, 0, 0.25);
 }
 
 .inquiry__status--error {
+  background: rgba(255, 90, 0, 0.12);
   color: var(--signal-orange, #FF5A00);
+  border: 1px solid rgba(255, 90, 0, 0.25);
+}
+
+.inquiry__status--sending {
+  color: var(--color-muted, #A7ADB2);
 }
 
 /* -- Footer ----------------------------------------------- */
