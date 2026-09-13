@@ -37,7 +37,7 @@
 
 :root {
   --font-display: 'Inter', sans-serif;
-  --font-display-editorial: 'AyrBrickerBlack', sans-serif;
+  --font-display-editorial: 'Inter', sans-serif;
   --font-display-mechanical: 'CAMechano', sans-serif;
   --font-display-mechanical-condensed: 'CAMechanoCondensed', sans-serif;
   --font-display-mechanical-wide: 'CAMechanoWide', sans-serif;

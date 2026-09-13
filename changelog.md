@@ -9,7 +9,7 @@ All notable changes to this project are documented here.
 - Marketing landing page: Nav, Hero (centered), Services, Approach, Quote, Inquiry, Footer
 - Design tokens ported from Fresh Phantom Design System (colors, typography, spacing, themes)
 - CSS architecture: base.css → structure.css → presentation.css via @import chain
-- Custom fonts: AyrBrickerBlack, CAMechano variants, Inter (Google Fonts)
+- Custom fonts: Killarney (wordmark), CAMechano variants, Inter (Google Fonts; body + wordmark fallback)
 - Contact form API endpoint (/api/contact) via Resend
 - Resend config: msg.freshphantom.com domain, from no-reply@msg.freshphantom.com
 - Two-email flow: internal notification to admin@freshphantom.com + submitter confirmation with 72-hour disclaimer

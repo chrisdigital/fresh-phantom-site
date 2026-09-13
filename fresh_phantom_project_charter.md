@@ -133,7 +133,7 @@ Tokens ported from Fresh Phantom Design System export, in `src/styles/tokens/`:
 
 - **Colors** — Phantom Black, Ghost White, Concrete, Volt, Signal Orange, Deep Teal, Warm White
 - **Themes** — Phantom Noir (dark), Concrete Field (light), Deep Field (teal), Signal (orange)
-- **Typography** — Inter (body/display), AyrBrickerBlack (editorial), CAMechano variants (mechanical labels)
+- **Typography** — Inter (body/display/wordmark fallback), Killarney (wordmark), CAMechano variants (mechanical labels)
 - **Spacing** — 4px base unit system
 - **Radii** — hard edges default, pill for controls
 

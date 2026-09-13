@@ -18,7 +18,7 @@
 }
 
 .fp-bricker {
-  font-family: 'Killarney', var(--font-display-editorial, 'AyrBrickerBlack', sans-serif);
+  font-family: 'Killarney', 'Inter', sans-serif;
   font-weight: normal;
 }
 
